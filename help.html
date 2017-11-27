@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+</head>
+<body>
+  <div id="help-text">
+    <h2>Welcome to Elphel</h2>
+    <i><p>Elphel high performance cameras are free software and hardware designs. Freedom of the users of Elphel products is our top priority - we value and protect it with the <a href='http://www.gnu.org/licenses/gpl.html'><b>GNU General Public License</b></a> that covers all the Elphel software and hardware designs. In 2011 CERN Open Hardware License became available for hardware products and since then Elphel cameras are distributed under <a href='http://www.ohwr.org/projects/cernohl'><b>CERN OHLv1.1</b></a> or newer.</p>
+
+    <p>Elphel uses multiple web applications for different activities, each application has its own navigation and internal logic. This page plays a role of a virtual desktop with multiple windows - one for each application. This page search launches simultaneous requests to each application and shows number of results found by each of the applications: Main Website, Development Blog, Wiki (Documentation), Mailing List Archive and Git Repository.</p>
+
+    <p>We hope you will find the new sites organization easier to navigate. Please feel free to comment and leave suggestions on our public mailing list.</p>
+
+    <p>Elphel team</p></i>
+
+    <img title='Home' style='cursor:pointer;' width=40 height=40 src='images/elphel-logo.png'>
+    <br/>
+    <br/>
+    <p>Help:</p>
+    <table>
+    <tr>
+      <td valign='top'>&bull;</td>
+      <td valign='top'><b>Main</b></td>
+      <td>Elphel's main website talks about our company, people and products.</td>
+    </tr>
+    <tr>
+      <td valign='top'>&bull;</td>
+      <td valign='top'><b>Blog</b></td>
+      <td>On the blog you can read in depth about current projects, find news and events announcements.</td>
+    </tr>
+    <tr>
+      <td valign='top'>&bull;</td>
+      <td valign='top'><b>Wiki</b></td>
+      <td>Wiki is for documentation, camera schematics, and parts download - all under GNU GPL and Open Hardware Licence.</td>
+    </tr>
+    <tr>
+      <td valign='top'>&bull;</td>
+      <td valign='top'><b>Support&nbsp;</b></td>
+      <td>Mail Archive is a very helpful resource for technical questions, frequently asked as well as rare ones. Searching in archive is the best start if you need help using the camera or developing your application - it is likely that somebody had similar problem and figured this out.</td>
+    </tr>
+    <tr>
+      <td valign='top'>&bull;</td>
+      <td valign='top'><b>Code</b></td>
+      <td>All of our software and FPGA projects are hosted at <b><i>https://git.elphel.com</i></b> - available for download under GNU GPLv3 license.</td>
+    </tr>
+    </table>
+    <br/>
+    <p>Each application window title is a link to the current application address that can be used to open just a single page in a separate window or tab.</p>
+    <br/>
+    <p>Technical details:</p>
+
+    <p>Each application is embedded into this page as IFRAME HTML element, they communicate with each other and the top page by sending messages. Web server optionally redirects requests for the specific applications to this framed version depending on a referrer URI. So if you come to <b><i>https://blog.elphel.com/some-blog-page</i></b> from external web site (such as a search engine), your browser is redirected to <b><i>https://www.elphel.com/blog/some-page</i></b> and the requested blog post is shown with other applications in the background allowing navigation and search.</p>
+
+    <p>No redirection happens if the web address is entered directly (no referrer) or the page is opened from a link on one of Elphel web sites.</p>
+    <br/>
+    <br/>
+  </div>
+</body>
+</html>

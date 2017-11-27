@@ -1,0 +1,61 @@
+
+body{
+  font-family: Helvetica, sans-serif;
+}
+
+.company-name{
+  font-size: 2em;
+  color: rgba(50,50,50,1);
+}
+
+.company-name a:visited, .company-name a:link{
+  color:black;
+}
+
+a{
+  text-decoration:none;
+  color:black;
+}
+
+a:visited, a:link{
+  color:#4078c0;
+}
+
+a:hover{
+  text-decoration:underline;
+  cursor:pointer;
+}
+
+.company-bio, .repo-description{
+  color: gray;
+}
+
+#head img{
+  padding:10px;
+}
+
+.repo-wrapper{
+  padding-bottom:0em;
+}
+
+.repo-link{
+  font-family: Helvetica, sans-serif;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.repo-description{
+  font-size: 0.9em;
+  padding-bottom:1em;
+}
+
+hr{
+  border:0px;
+  height:1px;
+  background:rgba(200,200,200,0.5);
+}
+
+.repo-updated{
+  color: gray;
+  font-size:0.8em;
+}
