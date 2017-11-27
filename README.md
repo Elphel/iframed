@@ -17,8 +17,9 @@ The following code is used to combine Elphel's websites in a single tab of a bro
 
 ## Usage
 
-* Provide a list of target websites in the *$TARGET_LIST* - PHP in *index.php*.
+* Provide a list of target websites in the **$TARGET_LIST** - PHP in *index.php*.
 * Set order, number of columns and base width - JS part in *index.php*.
+* Also edit search list in *search.php*
 * (optional) To enable inter-frame links following child websites should include the following js code:
 ```
 <script src="https://www.elphel.com/js/elphel_messenger.js"></script>
