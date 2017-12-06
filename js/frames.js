@@ -104,7 +104,7 @@ $(function(){
             if ((tmp_str.substr(-iframetrue.length)==iframetrue)&&(iframetrue!="")){
               tmp_str = tmp_str.substr(0,tmp_str.length-iframetrue.length);
             }
-            $(this).find("a").attr("href",tmp_str).attr("title","Open in a new window: "+tmp_str);
+            set_focus(selected_i);
           }
         });
 
@@ -568,7 +568,7 @@ function init_content(element,content,i){
     height:"100%"
   });
 
-  var tmp_div_header = $("<div>",{class:"content_header"}).html("<a title='Open in a new window:  "+targets[i].href+"' target='_blank' href='"+targets[i].href+"'>"+targets[i].name+"</a>");
+  var tmp_div_header = $("<div>",{class:"content_header"});
 
   tmp_div_header.attr("index",i);
 
@@ -631,6 +631,25 @@ function set_focus(i){
   update_frames();
 
   document.getElementById("iframe_"+i).contentWindow.postMessage({loadsubiframes:true},"*");
+
+  content_headers_reset(i);
+
+}
+
+function content_headers_reset(i){
+
+    $(".content_header").each(function(){
+
+      var tmp_i = $(this).attr("index");
+
+      if (tmp_i==i){
+        var isrc = $("#iframe_"+tmp_i).attr("src");
+        $(this).html("<span style='font-weight:normal;'>"+targets[tmp_i].name+": </span><a title='Open in a new window:  "+targets[tmp_i].href+"' target='_blank' href='"+isrc+"'>"+isrc+"</a>");
+      }else{
+        $(this).html("<a title='Open in a new window:  "+targets[tmp_i].href+"' target='_blank' href='"+targets[tmp_i].href+"'>"+targets[tmp_i].name+"</a>");
+      }
+
+    });
 
 }
 
